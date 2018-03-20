@@ -1,6 +1,7 @@
 # INTRO
 This is an offline creatinine clearance calculator program to help those on acute care rotations. It determines which weight to use (adjusted, ideal, total) automatically based on what was taught in Track 4.
 The code works for MacOS and Linux, but I am finding a way to make it available on Windows, which will come sometime later. This uses the Cockcroft-Gault Equation to estimate the renal function.
+
 ![(Program when ran](img/run.png)
 After entering in parameters:
 ![After entering in parameters](img/result.PNG)
@@ -25,14 +26,14 @@ To run, open terminal from your Mac, then type and run this command:
 ~/crcl.sh
 ```
 
-# UNINSTALLING OR DELETING THE PROGRAM
+### UNINSTALLING OR DELETING THE PROGRAM
 Simply delete the file crcr.sh. Or open terminal, and run this command:
 ```
 rm -i ~/crcl.sh
 ```
 
 
-# TECHNICAL JARGON
+### TECHNICAL JARGON
 The calculator uses the total body weight when less than ideal. It also uses adjusted body weight when TBW/IBW ratio is more than 1.2.
 
 To change this to another setting for example 1.3, you can use any text editor (Notepad, etc.) and edit the code's first section where it says
@@ -43,8 +44,8 @@ and changing it to
 ```
 cutoffABWratio=1.3
 ```
-
-
+ 
+ 
 It is also set to show its work by default, but this setting can be changed by changing 
 ```
 showwork=1
