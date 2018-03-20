@@ -147,7 +147,6 @@ if [ $showwork -eq 1 ]; then
 	  echo "Female patient, thus multiply by 0.85: (${CrCl})*(0.85) = $CrClFinal"
 	fi
 fi
-echo
 echo -e The patient\'s calculated creatine clearance is ${GREEN}$CrClFinal mL\/min${NC} \(gender\: $gender\).
 echo
 
