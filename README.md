@@ -46,5 +46,4 @@ and changing it to `cutoffABWratio=1.3`.
  
 It is also set to show its work by default, but this setting can be changed by changing `showwork=1` to `showwork=0` in the same area. I don't recommend this because forgetting how to manually calculate the renal function is never a good thing.
 
-
-
+Furthermore, this program assumes Python, Bash, and cURL are installed.
