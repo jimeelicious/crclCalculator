@@ -3,6 +3,7 @@ This is an offline creatinine clearance calculator program to help those on acut
 The code works for MacOS and Linux, but I am finding a way to make it available on Windows, which will come sometime later. This uses the Cockcroft-Gault Equation to estimate the renal function.
 
 ![(Program when ran](img/run.png)
+
 After entering in parameters:
 ![After entering in parameters](img/result.PNG)
 
@@ -36,25 +37,11 @@ rm -i ~/crcl.sh
 ### TECHNICAL JARGON
 The calculator uses the total body weight when less than ideal. It also uses adjusted body weight when TBW/IBW ratio is more than 1.2.
 
-To change this to another setting for example 1.3, you can use any text editor (Notepad, etc.) and edit the code's first section where it says
-```
-cutoffABWratio=1.2
-```
-and changing it to 
-```
-cutoffABWratio=1.3
-```
+To change this to another setting for example 1.3, you can use any text editor (Notepad, etc.) and edit the code's first section where it says `cutoffABWratio=1.2`
+and changing it to `cutoffABWratio=1.3`.
  
  
-It is also set to show its work by default, but this setting can be changed by changing 
-```
-showwork=1
-```
-to
-```
-showwork=0
-```
-in the same area. I don't recommend this because forgetting how to manually calculate the renal function is never a good thing.
+It is also set to show its work by default, but this setting can be changed by changing `showwork=1` to `showwork=0` in the same area. I don't recommend this because forgetting how to manually calculate the renal function is never a good thing.
 
 
 
