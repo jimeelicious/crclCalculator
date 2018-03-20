@@ -1,6 +1,6 @@
 # INTRO
-(Program when ran)[img/run.png]
-(After entering in parameters)[img/result.PNG]
+![(Program when ran](img/run.png)
+![After entering in parameters](img/result.PNG)
 
 This is an offline creatinine clearance calculator program to help those on acute care rotations. It determines which weight to use (adjusted, ideal, total) automatically based on what was taught in Track 4.
 The code works for MacOS and Linux, but I am finding a way to make it available on Windows, which will come sometime later. This uses the Cockcroft-Gault Equation to estimate the renal function.
