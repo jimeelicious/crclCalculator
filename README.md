@@ -4,7 +4,8 @@ This is an offline creatinine clearance calculator program to help those on acut
 The code works for MacOS and Linux, but I am finding a way to make it available on Windows, which will come sometime later. This uses the Cockcroft-Gault Equation to estimate the renal function.
 
 See
-> Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41. DOI: 10.1159/000180580
+> Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41.
+> DOI: 10.1159/000180580
 
 # INSTALLATION (from MacOS or Linux)
 
