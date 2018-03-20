@@ -13,7 +13,7 @@ More information on this calculation
 
 # INSTALLATION (from MacOS or Linux)
 
-Control + Space from the desktop to open Spotlight, then type "terminal" to open terminal.
+`CONTROL` + `SPACE` from the desktop to open Spotlight, then type "terminal" to open terminal.
 
 Then copy and paste this code and hit enter:
 ```
@@ -27,7 +27,10 @@ To run, open terminal from your Mac, then type and run this command:
 ~/crcl.sh
 ```
 
-### UNINSTALLING OR DELETING THE PROGRAM
+### Stopping the program
+To stop, press the `Control` + `C` keys any time.
+
+# UNINSTALLING OR DELETING THE PROGRAM
 Simply delete the file crcr.sh. Or open terminal, and run this command:
 ```
 rm -i ~/crcl.sh
