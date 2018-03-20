@@ -164,7 +164,7 @@ if [ $debug -eq 1 ]; then
 
 ### SCRIPT ###
 echo "Serum creatine calculator v1.0 by Jimmy"
-echo -e "To quit, hit ${GREEN}control + C${NC}"
+echo -e "To quit, hit ${GREEN}control + C${NC}."
 echo "If the program is wonky (e.g. typing in a letter for an age),"
 echo "quit the application and rerun again."
 echo
