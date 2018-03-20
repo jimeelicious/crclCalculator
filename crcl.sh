@@ -8,31 +8,44 @@ GREEN='\033[7;32m'
 NC='\033[0m'
 
 ### FUNCTIONS ###
+greet() {
+echo "Serum creatine calculator v1.0 by Jimmy"
+echo -e "To quit, hit Control + C."
+echo
+echo "If the program is wonky, quit the application and rerun again."
+echo
+}
+
 promptInput() {
 #prompt for height, weight, gender, and validates input
 read -p "Enter the age (years): " age
-#	 if ! $(echo $age | grep -Poq '^[0-9]\d*$'); then
-#	 echo Please enter the proper age.; exit 1
+##	 if ! $(echo $age | grep -Poq '^[0-9]\d*$'); then
+#	 if ! $(echo $age | perl -nle 'print if $t ||= m{^[0-9]\d*$} }{ exit 1 if !$t' &>/dev/null); then
+#	 echo Please enter the proper age. Press control + C to quit.; promptInput
 #	 fi
 
 read -p "Enter the height (inches): " height
-#	 if ! $(echo $height | grep -Poq '^[0-9]\d*(\.\d+)?$'); then
-#	 echo Please enter the proper height in inches.; exit 1
+##	 if ! $(echo $height | grep -Poq '^[0-9]\d*(\.\d+)?$'); then
+#	 if ! $(echo $height | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$} }{ exit 1 if !$t' &>/dev/null); then
+#	 echo Please enter the proper height in inches. Press control + C to quit.; promptInput
 #	 fi
 
 read -p "Enter the weight (kilograms): " TBW
-#	 if ! $(echo $TBW | grep -Poq '^[0-9]\d*(\.\d+)?$'); then
-#	 echo Please enter the proper weight in kilograms.; exit 1
+##	 if ! $(echo $TBW | grep -Poq '^[0-9]\d*(\.\d+)?$'); then
+#	 if ! $(echo $TBW | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$} }{ exit 1 if !$t' &>/dev/null); then
+#	 echo Please enter the proper weight in kilograms. Press control + C to quit.; promptInput
 #	 fi
 
 read -p "Indicate if male or female (m/f): " gender
-#	 if ! $(echo $gender | grep -Poq 'm|f'); then
-#	 echo Please enter either "m" or "f" only.; exit 1
+##	 if ! $(echo $gender | grep -Poq 'm|f'); then
+#	 if ! $(echo $gender | perl -nle 'print if $t ||= m{m|f} }{ exit 1 if !$t' &>/dev/null); then
+#	 echo Please enter either "m" or "f" only. Press control + C to quit.; promptInput
 #	 fi
 
 read -p "Enter in the serum creatinine (mg/dL): " scr
-#	 if ! $(echo $scr | grep -Poq '^[0-9]\d*(\.\d+)?$'); then
-#	 echo Please enter the serum creatinine in mg/dL.; exit 1
+##	 if ! $(echo $scr | grep -Poq '^[0-9]\d*(\.\d+)?$'); then
+#	 if ! $(echo $TBW | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$} }{ exit 1 if !$t' &>/dev/null); then
+#	 echo Please enter the serum creatinine in mg/dL. Press control + C to quit.; promptInput
 #	 fi
 }
 
@@ -162,11 +175,7 @@ if [ $debug -eq 1 ]; then
 
 
 ### SCRIPT ###
-echo "Serum creatine calculator v1.0 by Jimmy"
-echo -e "To quit, hit ${GREEN}control + C${NC}."
-echo "If the program is wonky (e.g. typing in a letter for an age),"
-echo "quit the application and rerun again."
-echo
+greet
 while true; do
   promptInput
   CalcIBW
