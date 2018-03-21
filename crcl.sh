@@ -10,7 +10,7 @@ NC='\033[0m'
 ### FUNCTIONS ###
 greet() {
 echo "---------------------------------------"
-echo "Serum creatine calculator v1.1 by Jimmy"
+echo "Serum creatine calculator v1.2 by Jimmy"
 echo "---------------------------------------"
 echo -e "To quit, hit Control + C."
 echo
@@ -178,6 +178,8 @@ if [ $showwork -eq 1 ]; then
 fi
 echo -e The patient\'s calculated creatine clearance is ${GREEN}$CrClFinal mL\/min${NC} \(gender\: $gender\).
 echo
+ABWflag=0
+skinnyFlag=0
 
 ## DEBUG FUNCTION
 if [ $debug -eq 1 ]; then
