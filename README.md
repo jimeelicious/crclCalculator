@@ -7,7 +7,7 @@ The code works for MacOS and Linux, but I am finding a way to make it available 
 After entering in parameters:
 ![After entering in parameters](img/result.PNG)
 
-View the source code here [(here](https://github.com/jimeelicious/creatineCalculator/blob/master/crcl.sh).
+View the source code here [here](https://github.com/jimeelicious/creatineCalculator/blob/master/crcl.sh).
 
 
 More information on using serum creatine as an estimate of renal function, see this journal for more details.
