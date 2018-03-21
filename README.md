@@ -13,7 +13,7 @@ More information on this calculation
 
 # INSTALLATION (from MacOS or Linux)
 
-`CONTROL` + `SPACE` from the desktop to open Spotlight, then type "terminal" to open terminal.
+`COMMAND` + `SPACE` from the desktop to open Spotlight, then type "terminal" to open terminal.
 
 Then copy and paste this code and hit enter:
 ```
