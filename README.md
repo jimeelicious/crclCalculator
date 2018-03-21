@@ -18,14 +18,15 @@ More information on using serum creatine as an estimate of renal function, see t
 
 Then copy and paste this code and hit enter:
 ```
-curl -L https://goo.gl/69wtMR -o ~/crcl.sh && chmod +x ~/crcl.sh
+curl -L https://goo.gl/69wtMR -o ~/Desktop/CrCl.command && chmod u+x ~/Desktop/CrCl.command
 ```
-
 
 # RUNNING THE PROGRAM
-To run, open terminal from your Mac, then type and run this command: 
+To run, click the icon on your desktop.
+
+OR, open terminal from your Mac then type and run this command: 
 ```
-~/crcl.sh
+~/Desktop/CrCl.command
 ```
 
 ### Stopping the program
