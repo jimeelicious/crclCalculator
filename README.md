@@ -18,7 +18,7 @@ More information on using serum creatine as an estimate of renal function, see t
 
 2. Copy and paste this code in terminal, and hit enter:
 ```
-curl -L https://goo.gl/69wtMR -o ~/Desktop/CrCl.command && chmod u+x ~/Desktop/CrCl.command
+curl -L https://goo.gl/9tVe59 -o ~/Desktop/CrCl.command && chmod u+x ~/Desktop/CrCl.command
 ```
 
 3. **That's it!** It's on your desktop now. You can move this file to your "Applications" folder or anywhere you'd like.
@@ -28,7 +28,7 @@ curl -L https://goo.gl/69wtMR -o ~/Desktop/CrCl.command && chmod u+x ~/Desktop/C
 
 2. Copy and paste this code in terminal, and hit enter:
 ```
-curl -L https://goo.gl/69wtMR -o ~/crcl.sh && chmod u+x ~/crcl.sh
+curl -L https://goo.gl/9tVe59 -o ~/crcl.sh && chmod u+x ~/crcl.sh
 ```
 
 3. You're all set! It's on your home directory. To run, open a terminal window and type `~/crcl.sh`.
