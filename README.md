@@ -27,7 +27,7 @@ curl -L https://goo.gl/69wtMR -o ~/Desktop/CrCl.command && chmod u+x ~/Desktop/C
 To run, click the icon on your desktop.
 
 ### Stopping the program
-To stop, press the `Control` + `C` keys any time.
+You may close the terminal window at any time to stop the program.
 
 # UNINSTALLING OR DELETING THE PROGRAM
 Simply delete the file on your desktop.
