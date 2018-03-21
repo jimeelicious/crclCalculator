@@ -21,7 +21,7 @@ More information on using serum creatine as an estimate of renal function, see t
 curl -L https://goo.gl/69wtMR -o ~/Desktop/CrCl.command && chmod u+x ~/Desktop/CrCl.command
 ```
 
-3. That's it! It's on your desktop now.
+3. **That's it!** It's on your desktop now. You can move this file to your "Applications" folder or anywhere you'd like.
 
 # RUNNING THE PROGRAM
 To run, click the icon on your desktop.
