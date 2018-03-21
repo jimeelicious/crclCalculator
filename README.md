@@ -7,8 +7,6 @@ The code works for MacOS and Linux, but I am finding a way to make it available 
 After entering in parameters:
 ![After entering in parameters](img/result.PNG)
 
-View the source code [here](https://github.com/jimeelicious/creatineCalculator/blob/master/crcl.sh).
-
 
 More information on using serum creatine as an estimate of renal function, see this journal for more details.
 > Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41.
@@ -49,4 +47,4 @@ and changing it to `cutoffABWratio=1.3`.
  
 It is also set to show its work by default, but this setting can be changed by changing `showwork=1` to `showwork=0` in the same area. I don't recommend this because forgetting how to manually calculate the renal function is never a good thing.
 
-Furthermore, this program assumes Python, Bash, and cURL are installed.
+View the source code [here](https://github.com/jimeelicious/creatineCalculator/blob/master/crcl.sh). This program assumes Python, Bash, and cURL are installed.
