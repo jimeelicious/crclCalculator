@@ -9,10 +9,10 @@ NC='\033[0m'
 
 ### FUNCTIONS ###
 greet() {
-echo "Serum creatine calculator v1.0 by Jimmy"
+echo "---------------------------------------"
+echo "Serum creatine calculator v1.1 by Jimmy"
+echo "---------------------------------------"
 echo -e "To quit, hit Control + C."
-echo
-echo "If the program is wonky, quit the application and rerun again."
 echo
 }
 
