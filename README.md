@@ -28,7 +28,7 @@ curl -L https://goo.gl/69wtMR -o ~/Desktop/CrCl.command && chmod u+x ~/Desktop/C
 
 2. Copy and paste this code in terminal, and hit enter:
 ```
-curl -L https://goo.gl/69wtMR -o ~/CrCl.sh && chmod u+x ~/CrCl.sh
+curl -L https://goo.gl/69wtMR -o ~/crcl.sh && chmod u+x ~/crcl.sh
 ```
 
 3. You're all set! It's on your home directory. To run, open a terminal window and type `~/crcl.sh`.
