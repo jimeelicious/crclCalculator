@@ -12,8 +12,8 @@ More information on using serum creatine as an estimate of renal function, see t
 > Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41.
 > DOI: 10.1159/000180580
 
-# INSTALLATION (from MacOS or Linux)
-
+# INSTALLATION
+### Macintosh Operating System
 1. `COMMAND` + `SPACE` from the desktop to open Spotlight, then type **terminal** and hit `Enter` to open terminal.
 
 2. Copy and paste this code in terminal, and hit enter:
@@ -22,6 +22,16 @@ curl -L https://goo.gl/69wtMR -o ~/Desktop/CrCl.command && chmod u+x ~/Desktop/C
 ```
 
 3. **That's it!** It's on your desktop now. You can move this file to your "Applications" folder or anywhere you'd like.
+
+### Linux
+1. Fire up terminal shell with `CONTROL` + `ALT` + `T`.
+
+2. Copy and paste this code in terminal, and hit enter:
+```
+curl -L https://goo.gl/69wtMR -o ~/CrCl.sh && chmod u+x ~/CrCl.sh
+```
+
+3. You're all set! It's on your home directory. To run, open a terminal window and type `~/crcl.sh`.
 
 # RUNNING THE PROGRAM
 To run, click the icon on your desktop.
