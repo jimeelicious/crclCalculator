@@ -14,29 +14,23 @@ More information on using serum creatine as an estimate of renal function, see t
 
 # INSTALLATION (from MacOS or Linux)
 
-`COMMAND` + `SPACE` from the desktop to open Spotlight, then type "terminal" to open terminal.
+1. `COMMAND` + `SPACE` from the desktop to open Spotlight, then type **terminal** and hit `Enter` to open terminal.
 
-Then copy and paste this code and hit enter:
+2. Copy and paste this code in terminal, and hit enter:
 ```
 curl -L https://goo.gl/69wtMR -o ~/Desktop/CrCl.command && chmod u+x ~/Desktop/CrCl.command
 ```
 
+3. That's it! It's on your desktop now.
+
 # RUNNING THE PROGRAM
 To run, click the icon on your desktop.
-
-OR, open terminal from your Mac then type and run this command: 
-```
-~/Desktop/CrCl.command
-```
 
 ### Stopping the program
 To stop, press the `Control` + `C` keys any time.
 
 # UNINSTALLING OR DELETING THE PROGRAM
-Simply delete the file crcr.sh. Or open terminal, and run this command:
-```
-rm -i ~/crcl.sh
-```
+Simply delete the file on your desktop.
 
 
 ### TECHNICAL JARGON
