@@ -76,7 +76,7 @@ if [ $gender = f ]; then
    else baseweight=50
    fi
 
-# Determines how many inches above 60 inches, then adds 2.3 kgs for every inch above for IBW
+# Determines how many inches above 60 inches, then adds 2.3 kgs for every inch above 60 inches to get IBW.
 heightdiff=$(( $height - 60 ))
 weightdiffadj=$(python -c "print 2.3*$heightdiff")
 IBW=$(python -c "print $baseweight+$weightdiffadj")
