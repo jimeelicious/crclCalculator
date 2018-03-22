@@ -10,7 +10,7 @@ NC='\033[0m'
 ### FUNCTIONS ###
 greet() {
 echo "---------------------------------------"
-echo "Serum creatine calculator v1.2 by Jimmy"
+echo "Serum creatine calculator v1.3 by Jimmy"
 echo "---------------------------------------"
 echo -e "To quit, hit Control + C."
 echo
@@ -29,21 +29,54 @@ while [ $loop = 1 ]; do read -p "Enter the age (years): " age
 done
 
 loop=1
-while [ $loop = 1 ]; do read -p "Enter the height (inches): " height
-	if ! $(echo $height | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$} }{ exit 1 if !$t' &>/dev/null); then
-	  echo Please enter the proper height in inches. Press control + C to quit.; sleep 0.4
-	else
-	  loop=0
-	fi
+while [ $loop = 1 ]; do read -p "Enter the height (inches), or type \"cm\" to switch to centimeters mode: " height
+        if ! $(echo $height | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$|^cm$} }{ exit 1 if !$t' &>/dev/null); then
+          echo "Please enter the proper height inches,"
+          echo "or type \"cm\" and hit enter to change mode to centimeters." ; sleep 0.4
+
+        elif [ $height = "cm" ]; then
+          loop=2
+          while [ $loop = 2 ]; do read -p "Enter the height (cm), or type \"in\" to switch to inches: " heightCM
+            if ! $(echo $heightCM | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$|^in$} }{ exit 1 if !$t' &>/dev/null); then
+              echo "Please enter the proper height in centimeters. Type \"in\" and hit enter to change input to inches."; sleep 0.4
+            elif [ $heightCM = "in" ]; then
+              loop=1
+            else
+              heightCMraw=$(python -c "print $heightCM/2.54")
+              height=$(python -c "print round($heightCMraw,2)")
+              echo "Converted to $height inches ($heightCM centimeters)."
+              loop=0
+            fi
+          done
+
+        else
+          loop=0
+        fi
 done
 
 loop=1
-while [ $loop = 1 ]; do read -p "Enter the weight (kilograms): " TBW
-	if ! $(echo $TBW | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$} }{ exit 1 if !$t' &>/dev/null); then
-	  echo Please enter the proper weight in kilograms. Press control + C to quit.; sleep 0.4
-	else
-	  loop=0
-	fi
+while [ $loop = 1 ]; do read -p "Enter the weight (kilograms), or type \"lbs\" to switch to pounds: " TBW
+        if ! $(echo $TBW | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$|^lbs$} }{ exit 1 if !$t' &>/dev/null); then
+          echo Please enter the proper weight in kilograms. Type "lbs" and hit enter to change mode to pounds.; sleep 0.4
+
+        elif [ $TBW = "lbs" ]; then
+          loop=2
+          while [ $loop = 2 ]; do read -p "Enter the weight (pounds), or type \"kgs\" to switch to kilograms: " TBWpounds
+            if ! $(echo $TBWpounds | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$|^kgs$} }{ exit 1 if !$t' &>/dev/null); then
+              echo Please enter the proper weight in pounds. Type "kgs" and hit enter to change mode to pounds.; sleep 0.4
+            elif [ $TBWpounds = "kgs" ]; then
+              loop=1
+            else
+              TBWraw=$(python -c "print $TBWpounds/2.20462")
+              TBW=$(python -c "print round($TBWraw,2)")
+              echo "Converted to $TBW kilograms ($TBWpounds pounds)."
+              loop=0
+            fi
+          done
+
+        else
+          loop=0
+        fi
 done
 
 loop=1
@@ -77,7 +110,7 @@ if [ $gender = f ]; then
    fi
 
 # Determines how many inches above 60 inches, then adds 2.3 kgs for every inch above 60 inches to get IBW.
-heightdiff=$(( $height - 60 ))
+heightdiff=$(python -c "print $height-60")
 weightdiffadj=$(python -c "print 2.3*$heightdiff")
 IBW=$(python -c "print $baseweight+$weightdiffadj")
 
