@@ -10,7 +10,7 @@ NC='\033[0m'
 ### FUNCTIONS ###
 greet() {
 echo "---------------------------------------"
-echo "Serum creatine calculator v1.3 by Jimmy"
+echo "Serum creatine calculator v1.4 by Jimmy"
 echo "---------------------------------------"
 echo -e "To quit, hit Control + C."
 echo
