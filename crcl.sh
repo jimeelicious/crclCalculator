@@ -22,7 +22,7 @@ loop=1
 while [ $loop = 1 ]; do read -p "Enter the age (years): " age
 ##	 if ! $(echo $age | grep -Poq '^[0-9]\d*$'); then
 	if ! $(echo $age | perl -nle 'print if $t ||= m{^[0-9]\d*$} }{ exit 1 if !$t' &>/dev/null); then
-	   echo Please enter the proper age. Press control + C to quit.; sleep 0.4
+	   echo "   Please enter the proper age. Press control + C to quit."; sleep 0.4
 	else
 	  loop=0
 	fi
@@ -31,21 +31,21 @@ done
 loop=1
 while [ $loop = 1 ]; do read -p "Enter the height (inches), or type \"cm\" to switch to centimeters mode: " height
         if ! $(echo $height | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$|^cm$} }{ exit 1 if !$t' &>/dev/null); then
-          echo "Please enter the proper height inches,"
-          echo "or type \"cm\" and hit enter to change mode to centimeters." ; sleep 1
+          echo "   Please enter the proper height inches,"
+          echo "   or type \"cm\" and hit enter to change mode to centimeters." ; sleep 1
 
         elif [ $height = "cm" ]; then
           loop=2
           while [ $loop = 2 ]; do read -p "Enter the height (cm), or type \"in\" to switch to inches: " heightCM
             if ! $(echo $heightCM | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$|^in$} }{ exit 1 if !$t' &>/dev/null); then
-              echo "Please enter the proper height in centimeters, or"
-	      echo "type \"in\" and hit enter to change input to inches."; sleep 1
+              echo "   Please enter the proper height in centimeters, or"
+	      echo "   type \"in\" and hit enter to change input to inches."; sleep 1
             elif [ $heightCM = "in" ]; then
               loop=1
             else
               heightCMraw=$(python -c "print $heightCM/2.54")
               height=$(python -c "print round($heightCMraw,2)")
-              echo "Converted to $height inches ($heightCM centimeters)."
+              echo "   > Converted to $height inches ($heightCM centimeters)."
               loop=0
             fi
           done
@@ -58,19 +58,19 @@ done
 loop=1
 while [ $loop = 1 ]; do read -p "Enter the weight (kilograms), or type \"lbs\" to switch to pounds: " TBW
         if ! $(echo $TBW | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$|^lbs$} }{ exit 1 if !$t' &>/dev/null); then
-          echo Please enter the proper weight in kilograms. Type "lbs" and hit enter to change mode to pounds.; sleep 1
+          echo "   Please enter the proper weight in kilograms. Type \"lbs\" and hit enter to change mode to pounds."; sleep 1
 
         elif [ $TBW = "lbs" ]; then
           loop=2
           while [ $loop = 2 ]; do read -p "Enter the weight (pounds), or type \"kgs\" to switch to kilograms: " TBWpounds
             if ! $(echo $TBWpounds | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$|^kgs$} }{ exit 1 if !$t' &>/dev/null); then
-              echo Please enter the proper weight in pounds. Type "kgs" and hit enter to change mode to pounds.; sleep 1
+              echo "   Please enter the proper weight in pounds. Type "kgs" and hit enter to change mode to pounds."; sleep 1
             elif [ $TBWpounds = "kgs" ]; then
               loop=1
             else
               TBWraw=$(python -c "print $TBWpounds/2.20462")
               TBW=$(python -c "print round($TBWraw,2)")
-              echo "Converted to $TBW kilograms ($TBWpounds pounds)."
+              echo "   > Converted to $TBW kilograms ($TBWpounds pounds)."
               loop=0
             fi
           done
@@ -83,7 +83,7 @@ done
 loop=1
 while [ $loop = 1 ]; do read -p "Indicate if male or female (m/f): " gender
 	if ! $(echo $gender | perl -nle 'print if $t ||= m{m|f} }{ exit 1 if !$t' &>/dev/null); then
-	  echo Please enter either "m" or "f" only. Press control + C to quit.; sleep 0.4
+	  echo "   Please enter either "m" or "f" only. Press control + C to quit."; sleep 0.4
 	else
 	  loop=0
 	fi
@@ -92,7 +92,7 @@ done
 loop=1
 while [ $loop = 1 ]; do read -p "Enter in the serum creatinine (mg/dL): " scr
 	if ! $(echo $scr | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$} }{ exit 1 if !$t' &>/dev/null); then
-	  echo Please enter the serum creatinine in mg/dL. Press control + C to quit.; sleep 0.4
+	  echo "   Please enter the serum creatinine in mg/dL. Press control + C to quit."; sleep 0.4
 	else
 	  loop=0
 	fi
@@ -100,6 +100,18 @@ done
 }
 
 
+
+
+DetLowScr() {
+# Determines if SCr needs to be 1 for patients older than 65 with SCr less than 1.0
+scrOrig=$scr
+scrChk=$(python -c "print int($scr)")
+if [ $scrChk -lt 1 ] && [ $age -ge 65 ]; then
+	scr=1
+	echo "   > Rounded SCr to 1.0 because patient age >65 years old with a SCr"
+	echo "     of $scrOrig <1.0  (geriatric muscle mass adjustment)."
+	fi
+}
 
 
 
@@ -230,6 +242,7 @@ if [ $debug -eq 1 ]; then
 greet
 while true; do
   promptInput
+  DetLowScr
   CalcIBW
   DetWeightType
   if [ "$ABWflag" = 1 ]; then
