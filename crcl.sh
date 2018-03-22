@@ -88,6 +88,11 @@ while [ $loop = 1 ]; do read -p "Indicate if male or female (m/f): " gender
 	  loop=0
 	fi
 done
+if [ $gender = f ]; then
+   genderFull=female
+else
+   genderFull=male
+fi
 
 loop=1
 while [ $loop = 1 ]; do read -p "Enter in the serum creatinine (mg/dL): " scr
@@ -224,7 +229,7 @@ if [ $showwork -eq 1 ]; then
 	  echo "Female patient, thus multiply by 0.85: (${CrCl})*(0.85) = $CrClFinal"
 	fi
 fi
-echo -e The estimated creatinine clearance is ${GREEN}$CrClFinal mL\/min${NC} \(gender\: $gender\).
+echo -e The estimated creatinine clearance is ${GREEN}$CrClFinal mL\/min${NC} \($genderFull\).
 echo
 ABWflag=0
 skinnyFlag=0
