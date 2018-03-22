@@ -28,6 +28,24 @@ while [ $loop = 1 ]; do read -p "Enter the age (years): " age
 	fi
 done
 
+
+
+loop=1
+while [ $loop = 1 ]; do read -p "Indicate if male or female (m/f): " gender
+	if ! $(echo $gender | perl -nle 'print if $t ||= m{m|f} }{ exit 1 if !$t' &>/dev/null); then
+	  echo "   Please enter either \"m\" or \"f\" only. Press control + C to quit."; sleep 0.4
+	else
+	  loop=0
+	fi
+done
+if [ $gender = f ]; then
+   genderFull=female
+else
+   genderFull=male
+fi
+
+
+
 loop=1
 while [ $loop = 1 ]; do read -p "Enter the height (inches), or type \"cm\" to switch to centimeters mode: " height
         if ! $(echo $height | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$|^cm$} }{ exit 1 if !$t' &>/dev/null); then
@@ -79,20 +97,6 @@ while [ $loop = 1 ]; do read -p "Enter the weight (kilograms), or type \"lbs\" t
           loop=0
         fi
 done
-
-loop=1
-while [ $loop = 1 ]; do read -p "Indicate if male or female (m/f): " gender
-	if ! $(echo $gender | perl -nle 'print if $t ||= m{m|f} }{ exit 1 if !$t' &>/dev/null); then
-	  echo "   Please enter either \"m\" or \"f\" only. Press control + C to quit."; sleep 0.4
-	else
-	  loop=0
-	fi
-done
-if [ $gender = f ]; then
-   genderFull=female
-else
-   genderFull=male
-fi
 
 loop=1
 while [ $loop = 1 ]; do read -p "Enter in the serum creatinine (mg/dL): " scr
