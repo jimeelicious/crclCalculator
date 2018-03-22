@@ -1,5 +1,9 @@
 # INTRO
-This is an offline creatinine clearance calculator program to help those on acute care rotations. It determines which weight to use (adjusted, ideal, total) automatically based on what was taught in Track 4.
+This is an offline creatinine clearance calculator program to help those on acute care rotations. 
+It determines which weight to use (adjusted, ideal, total) automatically based on what was taught
+ in Track 4. This equation also factors in reduced geriatric muscle mass when serum creatinine is less than
+1.0 and when the patient is older than 65 years old.
+
 The code works for MacOS and Linux, but I am finding a way to make it available on Windows, which will come sometime later. This uses the Cockcroft-Gault Equation to estimate the renal function.
 
 ![(Program when ran](img/run.png)

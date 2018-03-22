@@ -109,7 +109,7 @@ scrChk=$(python -c "print int($scr)")
 if [ $scrChk -lt 1 ] && [ $age -ge 65 ]; then
 	scr=1
 	echo "   > Rounded SCr to 1.0 because patient age >65 years old with a SCr"
-	echo "     of $scrOrig <1.0  (geriatric muscle mass adjustment)."
+	echo "     of $scrOrig < 1.0  (geriatric muscle mass adjustment)."
 	fi
 }
 
@@ -148,11 +148,12 @@ DetWeightType() {
 wtratio=$(python -c "print 100*$TBW/$IBW")
 wtratioRound=$(python -c "print int($wtratio)")
 cutoff=$(python -c "print int(100*$cutoffABWratio)")
+wtratioDisplay=$(python -c "print round($TBW/$IBW,2)")
 if [ $wtratioRound -ge "$cutoff" ]; then
 	ABWflag=1
   elif [ $wtratioRound -lt 100 ]; then
 	skinnyFlag=1
-	echo Using total body weight because the patient\'s TBW/IBW ratio is $(python -c "print round($TBW/$IBW,2)") \< 1
+	echo "   > Using total body weight because the patient's TBW/IBW ratio is ${wtratioDisplay} < 1"
   fi
 
 ## DEBUG FUNCTION
@@ -171,6 +172,7 @@ GetABW(){
 # Calculates ABW. Finds difference between TBW, IBW first, then multiplies by 0.4 adjustment.
 TBWIBWdiff=$(python -c "print $TBW-$IBW")
 ABW=$(python -c "print 0.4*$TBWIBWdiff+$IBW")
+wtratioDisplay=$(python -c "print round($TBW/$IBW,2)")
 
 ## DEBUG FUNCTION
 if [ $debug -eq 1 ]; then
@@ -180,8 +182,8 @@ if [ $debug -eq 1 ]; then
 
 # Calculates final ABW result by adding above result
 if [ $showwork -eq 1 ]; then
+echo "   > ABW is used because the patient's TBW/IBW ratio is $wtratioDisplay > ${cutoffABWratio}"
 echo "ABW = IBW + 0.4*(TBW-IBW) = $IBW + 0.4*($TBW-$IBW) = $ABW"
-echo ABW is used because the patient\'s TBW/IBW ratio is $(python -c "print round($TBW/$IBW,2)") \> "${cutoffABWratio}".
 fi
 }
 
