@@ -32,13 +32,14 @@ loop=1
 while [ $loop = 1 ]; do read -p "Enter the height (inches), or type \"cm\" to switch to centimeters mode: " height
         if ! $(echo $height | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$|^cm$} }{ exit 1 if !$t' &>/dev/null); then
           echo "Please enter the proper height inches,"
-          echo "or type \"cm\" and hit enter to change mode to centimeters." ; sleep 0.4
+          echo "or type \"cm\" and hit enter to change mode to centimeters." ; sleep 1
 
         elif [ $height = "cm" ]; then
           loop=2
           while [ $loop = 2 ]; do read -p "Enter the height (cm), or type \"in\" to switch to inches: " heightCM
             if ! $(echo $heightCM | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$|^in$} }{ exit 1 if !$t' &>/dev/null); then
-              echo "Please enter the proper height in centimeters. Type \"in\" and hit enter to change input to inches."; sleep 0.4
+              echo "Please enter the proper height in centimeters, or"
+	      echo "type \"in\" and hit enter to change input to inches."; sleep 1
             elif [ $heightCM = "in" ]; then
               loop=1
             else
@@ -57,13 +58,13 @@ done
 loop=1
 while [ $loop = 1 ]; do read -p "Enter the weight (kilograms), or type \"lbs\" to switch to pounds: " TBW
         if ! $(echo $TBW | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$|^lbs$} }{ exit 1 if !$t' &>/dev/null); then
-          echo Please enter the proper weight in kilograms. Type "lbs" and hit enter to change mode to pounds.; sleep 0.4
+          echo Please enter the proper weight in kilograms. Type "lbs" and hit enter to change mode to pounds.; sleep 1
 
         elif [ $TBW = "lbs" ]; then
           loop=2
           while [ $loop = 2 ]; do read -p "Enter the weight (pounds), or type \"kgs\" to switch to kilograms: " TBWpounds
             if ! $(echo $TBWpounds | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$|^kgs$} }{ exit 1 if !$t' &>/dev/null); then
-              echo Please enter the proper weight in pounds. Type "kgs" and hit enter to change mode to pounds.; sleep 0.4
+              echo Please enter the proper weight in pounds. Type "kgs" and hit enter to change mode to pounds.; sleep 1
             elif [ $TBWpounds = "kgs" ]; then
               loop=1
             else
