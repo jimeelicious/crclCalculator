@@ -12,7 +12,7 @@ After entering in parameters:
 ![After entering in parameters](img/result.PNG)
 
 
-More information on using serum creatine as an estimate of renal function, see this journal for more details.
+More information on using serum creatinine as an estimate of renal function, see this journal for more details.
 > Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41.
 > DOI: 10.1159/000180580
 

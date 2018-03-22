@@ -9,9 +9,9 @@ NC='\033[0m'
 
 ### FUNCTIONS ###
 greet() {
-echo "---------------------------------------"
-echo "Serum creatine calculator v1.4 by Jimmy"
-echo "---------------------------------------"
+echo "-----------------------------------------"
+echo "Serum creatinine calculator v1.4 by Jimmy"
+echo "-----------------------------------------"
 echo -e "To quit, hit Control + C."
 echo
 }
@@ -45,7 +45,7 @@ while [ $loop = 1 ]; do read -p "Enter the height (inches), or type \"cm\" to sw
             else
               heightCMraw=$(python -c "print $heightCM/2.54")
               height=$(python -c "print round($heightCMraw,2)")
-              echo "   > Converted to $height inches ($heightCM centimeters)."
+              echo "   * Converted to $height inches ($heightCM centimeters)."
               loop=0
             fi
           done
@@ -70,7 +70,7 @@ while [ $loop = 1 ]; do read -p "Enter the weight (kilograms), or type \"lbs\" t
             else
               TBWraw=$(python -c "print $TBWpounds/2.20462")
               TBW=$(python -c "print round($TBWraw,2)")
-              echo "   > Converted to $TBW kilograms ($TBWpounds pounds)."
+              echo "   * Converted to $TBW kilograms ($TBWpounds pounds)."
               loop=0
             fi
           done
@@ -108,8 +108,8 @@ scrOrig=$scr
 scrChk=$(python -c "print int($scr)")
 if [ $scrChk -lt 1 ] && [ $age -ge 65 ]; then
 	scr=1
-	echo "   > Rounded SCr to 1.0 because patient age >65 years old with a SCr"
-	echo "     of $scrOrig < 1.0  (geriatric muscle mass adjustment)."
+	echo "   * Rounded SCr to 1.0 because patient age >65 years old with a SCr of"
+	echo "     $scrOrig < 1.0  (reduced geriatric muscle mass adjustment)."
 	fi
 }
 
@@ -153,7 +153,7 @@ if [ $wtratioRound -ge "$cutoff" ]; then
 	ABWflag=1
   elif [ $wtratioRound -lt 100 ]; then
 	skinnyFlag=1
-	echo "   > Using total body weight because the patient's TBW/IBW ratio is ${wtratioDisplay} < 1"
+	echo "   * Using total body weight because the patient's TBW/IBW ratio is ${wtratioDisplay} < 1"
   fi
 
 ## DEBUG FUNCTION
@@ -182,7 +182,7 @@ if [ $debug -eq 1 ]; then
 
 # Calculates final ABW result by adding above result
 if [ $showwork -eq 1 ]; then
-echo "   > ABW is used because the patient's TBW/IBW ratio is $wtratioDisplay > ${cutoffABWratio}"
+echo "   * ABW is used because the patient's TBW/IBW ratio is $wtratioDisplay > ${cutoffABWratio}"
 echo "ABW = IBW + 0.4*(TBW-IBW) = $IBW + 0.4*($TBW-$IBW) = $ABW"
 fi
 }
@@ -224,7 +224,7 @@ if [ $showwork -eq 1 ]; then
 	  echo "Female patient, thus multiply by 0.85: (${CrCl})*(0.85) = $CrClFinal"
 	fi
 fi
-echo -e The patient\'s calculated creatine clearance is ${GREEN}$CrClFinal mL\/min${NC} \(gender\: $gender\).
+echo -e The estimated creatinine clearance is ${GREEN}$CrClFinal mL\/min${NC} \(gender\: $gender\).
 echo
 ABWflag=0
 skinnyFlag=0
