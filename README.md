@@ -11,15 +11,15 @@ The code works for MacOS and Linux, but I am finding a way to make it available 
 After entering in parameters:
 ![After entering in parameters](img/result.PNG)
 
-### Important disclaimer
-This code was written to assist, not definitely determine, renal clearance. In other words, it should not solely be used to determine renal function. One **must** recheck the calculations when using this in a clinical setting.
+### Important Disclaimer
+This code was written to assist, not definitely determine, renal clearance. In other words, it should not solely be used to determine renal function. In a clinical setting, one **must** manually recheck these calculations.
 
-SCr is **a lagging lab measurement** reflective of the patient's state approximately 2-3 days from the present. It is imperative that one's clinical judgment must be used when determining the appropriate dosage adjustment for a patient, keeping in mind of renal function trends and current state. **The best, most-current, renal function status would be reflected by the urine output (UOP) in the labs.**
+SCr is a **lagging lab measurement** reflective of the patient's state approximately 2-3 days from the present. It is imperative that one's clinical judgment must be used when determining the appropriate dosage adjustment for a patient, keeping in mind of renal function trends and current state.
 
+The best, most-current, renal function status would be reflected by the urine output (UOP) in the labs.
 
-More information on using serum creatinine as an estimate of renal function, see this journal for more details.
-> Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41.
-> DOI: 10.1159/000180580
+Reference
+> Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41. DOI: 10.1159/000180580
 
 # INSTALLATION
 ### Macintosh Operating System
@@ -62,3 +62,7 @@ and changing it to `cutoffABWratio=1.3`.
 It is also set to show its work by default, but this setting can be changed by changing `showwork=1` to `showwork=0` in the same area. I don't recommend this because forgetting how to manually calculate the renal function is never a good thing.
 
 View the source code [here](https://github.com/jimeelicious/creatineCalculator/blob/master/crcl.sh). This program assumes Python, Bash, and cURL are installed.
+
+#### Acknowledgements
+- **Dr. Adrian Palisoc, PharmD.**
+For his contribution the creation in the disclaimer.
