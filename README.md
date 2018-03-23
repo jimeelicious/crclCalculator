@@ -14,14 +14,13 @@ After entering in parameters:
 ### Important Disclaimer
 This code was written to assist, not definitely determine, a person's renal clearance. In other words, it should not solely be used to estimate renal function. In a clinical setting, one **must** manually recheck these calculations.
 
-**_Why?_** SCr is a **lagging lab measurement** reflective of the patient's state approximately 2-3 days from the present. It is imperative that one's clinical judgment must be used when determining the appropriate dosage adjustment for a patient, keeping in mind of renal function trends and current state.
+**_Why?_** SCr is a *lagging* lab measurement reflective of the patient's state approximately 2-3 days from the present. It is imperative that one's clinical judgment must be used when determining the appropriate dosage adjustment for a patient, keeping in mind of renal function trends and current state.
 
 The best, most-current, renal function status would be reflected by the urine output (UOP) in the labs.
 
 See the original paper for the Cockcroft-Gault equation:
 > Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41.
->
-> DOI: 10.1159/000180580
+> doi:10.1159/000180580.
 
 
 # INSTALLATION
@@ -55,7 +54,7 @@ You may close the terminal window at any time to stop the program.
 Simply delete the file on your desktop.
 
 
-### TECHNICAL JARGON
+### Technical Details
 The calculator uses the total body weight when less than ideal. It also uses adjusted body weight when TBW/IBW ratio is more than 1.2.
 
 To change this to another setting for example 1.3, you can use any text editor (Notepad, etc.) and edit the code's first section where it says `cutoffABWratio=1.2`
