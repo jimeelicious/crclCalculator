@@ -18,7 +18,7 @@ SCr is a **lagging lab measurement** reflective of the patient's state approxima
 
 The best, most-current, renal function status would be reflected by the urine output (UOP) in the labs.
 
-Reference
+See the original paper for the Cockcroft-Gault equation:
 > Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41. DOI: 10.1159/000180580
 
 # INSTALLATION
@@ -65,4 +65,4 @@ View the source code [here](https://github.com/jimeelicious/creatineCalculator/b
 
 #### Acknowledgements
 - **Dr. Adrian Palisoc, PharmD.**
-For his contribution the creation in the disclaimer.
+For his contribution in providing crucial clinical pearls that led to the creation of the disclaimer.
