@@ -11,6 +11,11 @@ The code works for MacOS and Linux, but I am finding a way to make it available 
 After entering in parameters:
 ![After entering in parameters](img/result.PNG)
 
+### Important disclaimer
+This code was written to assist, not definitely determine, renal clearance. In other words, it should not solely be used to determine renal function. One **must** recheck the calculations when using this in a clinical setting.
+
+SCr is **a lagging lab measurement** reflective of the patient's state approximately 2-3 days from the present. It is imperative that one's clinical judgment must be used when determining the appropriate dosage adjustment for a patient, keeping in mind of renal function trends and current state. **The best, most-current, renal function status would be reflected by the urine output (UOP) in the labs.**
+
 
 More information on using serum creatinine as an estimate of renal function, see this journal for more details.
 > Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41.

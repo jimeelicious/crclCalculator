@@ -12,7 +12,7 @@ greet() {
 echo "-----------------------------------------"
 echo "Serum creatinine calculator v1.4 by Jimmy"
 echo "-----------------------------------------"
-echo -e "To quit, hit Control + C."
+echo -e "Reminder: On dialysis? Don't calculate CrCl."
 echo
 }
 
