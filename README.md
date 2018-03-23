@@ -12,14 +12,17 @@ After entering in parameters:
 ![After entering in parameters](img/result.PNG)
 
 ### Important Disclaimer
-This code was written to assist, not definitely determine, renal clearance. In other words, it should not solely be used to determine renal function. In a clinical setting, one **must** manually recheck these calculations.
+This code was written to assist, not definitely determine, a person's renal clearance. In other words, it should not solely be used to estimate renal function. In a clinical setting, one **must** manually recheck these calculations.
 
-SCr is a **lagging lab measurement** reflective of the patient's state approximately 2-3 days from the present. It is imperative that one's clinical judgment must be used when determining the appropriate dosage adjustment for a patient, keeping in mind of renal function trends and current state.
+**_Why?_** SCr is a **lagging lab measurement** reflective of the patient's state approximately 2-3 days from the present. It is imperative that one's clinical judgment must be used when determining the appropriate dosage adjustment for a patient, keeping in mind of renal function trends and current state.
 
 The best, most-current, renal function status would be reflected by the urine output (UOP) in the labs.
 
 See the original paper for the Cockcroft-Gault equation:
-> Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41. DOI: 10.1159/000180580
+> Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41.
+>
+> DOI: 10.1159/000180580
+
 
 # INSTALLATION
 ### Macintosh Operating System
