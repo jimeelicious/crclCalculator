@@ -24,7 +24,7 @@ See the original paper for the Cockcroft-Gault equation:
 
 
 # INSTALLATION
-### <img src="http://icons.iconarchive.com/icons/icons8/windows-8/256/Systems-Mac-Os-icon.png" width="24"> Macintosh
+### <img src="http://icons.iconarchive.com/icons/icons8/windows-8/256/Systems-Mac-Os-icon.png" width="24">   Macintosh
 1. `COMMAND` + `SPACE` from the desktop to open Spotlight, then type **terminal** and hit `Enter` to open terminal.
 
 2. Copy and paste this code in terminal, and hit enter:
@@ -34,7 +34,7 @@ curl -L https://goo.gl/9tVe59 -o ~/Desktop/CrCl.command && chmod u+x ~/Desktop/C
 
 3. **That's it!** It's on your desktop now. You can move this file to your "Applications" folder or anywhere you'd like.
 
-### <img src="https://cdn4.iconfinder.com/data/icons/proglyphs-free/512/Linux_-_Tux-128.png" width="24"> Linux
+### <img src="https://cdn4.iconfinder.com/data/icons/proglyphs-free/512/Linux_-_Tux-128.png" width="24">   Linux
 1. Fire up terminal shell with `CONTROL` + `ALT` + `T`.
 
 2. Copy and paste this code in terminal, and hit enter:
