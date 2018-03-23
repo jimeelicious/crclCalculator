@@ -1,7 +1,12 @@
 #!/bin/bash
-debug=0
+
+### USER OPTIONS ###
+# Shows work when calculating
 showwork=1
+# Cuttoff ratio to trigger adjusted body wt (default 120% of IBW)
 cutoffABWratio=1.2
+# Turns on debugging mode
+debug=0
 
 ### Color settings ###
 GREEN='\033[7;32m'
@@ -9,10 +14,10 @@ NC='\033[0m'
 
 ### FUNCTIONS ###
 greet() {
-echo "-----------------------------------------"
-echo "Serum creatinine calculator v1.4 by Jimmy"
-echo "-----------------------------------------"
-echo -e "Reminder: On dialysis? Don't calculate CrCl."
+echo "-------------------------------------------"
+echo " Serum creatinine calculator v1.4 by Jimmy "
+echo "-------------------------------------------"
+echo -e "Hint: On dialysis? Don't calculate CrCl."
 echo
 }
 
