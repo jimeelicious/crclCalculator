@@ -42,19 +42,18 @@ curl -L https://goo.gl/9tVe59 -o ~/Desktop/CrCl.command && chmod u+x ~/Desktop/C
 curl -L https://goo.gl/9tVe59 -o ~/crcl.sh && chmod u+x ~/crcl.sh
 ```
 
-3. You're all set! It's on your home directory. To run, open a terminal window and type `~/crcl.sh`.
+3. You're all set! It's on your home directory.
 
-# RUNNING THE PROGRAM
-To run, click the icon on your desktop.
+## Running the program
+Mac: To run, click the icon on your desktop. You may close the terminal window at any time to stop the program.
 
-### Stopping the program
-You may close the terminal window at any time to stop the program.
+Linux: The program is installed in your home directory. Type `~/crcl.sh` to run the program.
 
-# UNINSTALLING OR DELETING THE PROGRAM
-Simply delete the file on your desktop.
+## Uninstalling/Deleting
+Simply delete the file on your desktop or home directory.
 
 
-### Technical Details
+# Technical Details
 The calculator uses the total body weight when less than ideal. It also uses adjusted body weight when TBW/IBW ratio is more than 1.2.
 
 To change this to another setting for example 1.3, you can use any text editor (Notepad, etc.) and edit the code's first section where it says `cutoffABWratio=1.2`
