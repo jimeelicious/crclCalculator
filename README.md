@@ -1,4 +1,5 @@
 # INTRO
+<img src="https://github.com/favicon.ico" width="48">
 This is an offline creatinine clearance calculator program to help those on acute care rotations. 
 It determines which weight to use (adjusted, ideal, total) automatically based on what was taught
  in Track 4. This equation also factors in reduced geriatric muscle mass when serum creatinine is less than
