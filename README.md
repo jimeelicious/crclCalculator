@@ -54,8 +54,7 @@ Simply delete the file on your desktop or home directory.
 
 
 # Technical Details
-The calculator uses the total body weight when less than ideal. It also uses adjusted body weight when TBW/IBW ratio is more than 1.2.
-
+The calculator uses the total body weight when less than ideal. It also uses adjusted body weight when TBW/IBW ratio is more than 1.2. 
 To change this to another setting for example 1.3, you can use any text editor (Notepad, etc.) and edit the code's first section where it says `cutoffABWratio=1.2`
 and changing it to `cutoffABWratio=1.3`.
  
