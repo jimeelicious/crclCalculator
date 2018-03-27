@@ -67,7 +67,7 @@ Note that this is only available for Windows 10.
 
 7. Then, copy and paste this command and hit enter.
 ```
-sudo apt-get update && sudo apt-get -y install python && curl -L https://goo.gl/9tVe59 -o ~/crcl.sh && chmod u+x ~/crcl.sh && echo "Type ~/crcl.sh to start the creatinine calculator." >> ~/.bashrc
+sudo apt-get update && sudo apt-get -y install python && curl -L https://goo.gl/9tVe59 -o ~/crcl.sh && chmod u+x ~/crcl.sh && echo 'echo Type ~/crcl.sh to start the creatinine calculator.' >> ~/.bashrc && clear; echo 'Complete! Type ~/crcl.sh to run the program. In the future, click Start Menu > Ubuntu to open the creatinine calculator.'
 ```
 
 8. That's it! You're complete. Refer to the next section below on how to run the program.
