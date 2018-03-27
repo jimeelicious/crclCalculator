@@ -51,7 +51,7 @@ Note that this is only available for Windows 10.
 1. Click the *Start Menu*, and type in **Turn Windows features on or off**. Hit `Enter`.
 
 2. Find and check the **Windows Subsystem for Linux**, and hit OK.
-![Adjustable options](img/settingscode.png)
+![Adjustable options](img/w10linuxsetting.png)
 
 3. Restart your computer when prompted.
 
@@ -77,7 +77,7 @@ sudo apt-get update && sudo apt-get -y install python && curl -L https://goo.gl/
 
 **Linux**: The program is installed in your home directory. Type `~/crcl.sh` to run the program.
 
-**Windows**: **Start Menu** > Type `Ubuntu` and hit enter. In the terminal, type `~/crcl.sh` to run the program.
+**Windows**: *Start Menu* > Type `Ubuntu` and hit enter. In the terminal, type `~/crcl.sh` to run the program.
 
 ## Uninstalling or deleting
 Simply delete the file on your desktop or home directory.
@@ -90,6 +90,7 @@ and changing it to `cutoffABWratio=1.3`.
  
 It is also set to show its work by default, but this setting can be changed by changing `showwork=1` to `showwork=0` in the same area. I don't recommend this because forgetting how to manually calculate the renal function is never a good thing.
 
+To change these settings, locate and change the following lines in the source code:
 ![(Adjustable options](img/settingscode.png)
 
 View the source code [here](https://github.com/jimeelicious/creatineCalculator/blob/master/crcl.sh). This program assumes Python, Bash, and cURL are installed.
