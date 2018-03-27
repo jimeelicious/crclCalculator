@@ -4,7 +4,7 @@ It automatically determines which weight to use (adjusted, ideal, total), multip
 by 0.85 if female, and accounts for reduced geriatric muscle mass when serum creatinine is less than
 1.0 and when the patient is older than 65 years old.
 
-The code works for MacOS and Linux, but I am finding a way to make it available on Windows, which will come sometime later. This uses the Cockcroft-Gault Equation to estimate the renal function.
+The code works for MacOS, Linux, and Windows 10 only. Windows 10 requires a separate installation of Ubuntu, whose instructions are provided below. This uses the Cockcroft-Gault Equation to estimate the renal function.
 
 ![(Program when ran](img/start.png)
 
@@ -44,10 +44,40 @@ curl -L https://goo.gl/9tVe59 -o ~/crcl.sh && chmod u+x ~/crcl.sh
 
 3. You're all set! It's on your home directory.
 
-## Running the program
-Mac: To run, click the icon on your desktop. You may close the terminal window at any time to stop the program.
 
-Linux: The program is installed in your home directory. Type `~/crcl.sh` to run the program.
+### <img src="https://image.freepik.com/free-icon/windows-8-logo_318-40228.jpg" width="20"> Windows 10
+Note that this is only available for Windows 10.
+
+1. Click the *Start Menu*, and type in **Turn Windows features on or off**. Hit `Enter`.
+
+2. Find and check the **Windows Subsystem for Linux**, and hit OK.
+![Adjustable options](img/settingscode.png)
+
+3. Restart your computer when prompted.
+
+4. Click the *Start Menu*, then type **Ubuntu**. Select the "Ubuntu" app from the *Trusted Microsoft Store app* option.
+![Start Menu](img/ubuntumenu.png)
+
+5. Download it by clicking the `Get` button in the Microsoft Store. Once down, click `Launch`.
+
+6. Follow the instructions to install. This may take a while.
+![Ubuntu install](img/ubuntuinstall.png)
+- When complete, create an account. This can be the same or different as your Windows log-in.
+
+7. Then, copy and paste this command and hit enter.
+```
+sudo apt-get update && sudo apt-get -y install python && curl -L https://goo.gl/9tVe59 -o ~/crcl.sh && chmod u+x ~/crcl.sh && echo "Type ~/crcl.sh to start the creatinine calculator." >> ~/.bashrc
+```
+
+8. That's it! You're complete. Refer to the next section below on how to run the program.
+
+
+## Running the program
+**Mac**: To run, click the icon on your desktop. You may close the terminal window at any time to stop the program.
+
+**Linux**: The program is installed in your home directory. Type `~/crcl.sh` to run the program.
+
+**Windows**: **Start Menu** > Type `Ubuntu` and hit enter. In the terminal, type `~/crcl.sh` to run the program.
 
 ## Uninstalling or deleting
 Simply delete the file on your desktop or home directory.
@@ -58,8 +88,9 @@ The calculator uses the total body weight when less than ideal. It also uses adj
 To change this to another setting for example 1.3, you can use any text editor (Notepad, etc.) and edit the code's first section where it says `cutoffABWratio=1.2`
 and changing it to `cutoffABWratio=1.3`.
  
- 
 It is also set to show its work by default, but this setting can be changed by changing `showwork=1` to `showwork=0` in the same area. I don't recommend this because forgetting how to manually calculate the renal function is never a good thing.
+
+![(Adjustable options](img/settingscode.png)
 
 View the source code [here](https://github.com/jimeelicious/creatineCalculator/blob/master/crcl.sh). This program assumes Python, Bash, and cURL are installed.
 
