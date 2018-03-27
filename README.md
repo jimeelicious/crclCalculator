@@ -65,7 +65,7 @@ Note that this is only available for Windows 10.
 - When complete, create an account. This can be the same or different as your Windows log-in. 
 - Note that when entering the password, your input will not be displayed, even though you are typing. Don't worry this is normal as the system hides your input for security.
 
-7. Then, copy and paste this command and hit enter. Enter your newly created password if prompted.
+7. Then, copy and paste this command and hit `Enter`. Enter your newly created password if prompted.
 ```
 curl -L https://goo.gl/jas2dx -o ~/w10install.sh && chmod +x ~/w10install.sh && ~/w10install.sh && rm -rf ~/w10install.sh
 ```
