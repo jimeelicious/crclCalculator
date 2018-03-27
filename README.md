@@ -31,8 +31,9 @@ See the original paper for the Cockcroft-Gault equation:
 ```
 curl -L https://goo.gl/9tVe59 -o ~/Desktop/CrCl.command && chmod u+x ~/Desktop/CrCl.command
 ```
+Close the terminal window once this is done.
 
-3. **That's it!** It's on your desktop now. You can move this file to your "Applications" folder or anywhere you'd like.
+3. That's it! It's on your desktop now. You can move this file to your "Applications" folder or anywhere you'd like.
 
 ### <img src="https://cdn4.iconfinder.com/data/icons/proglyphs-free/512/Linux_-_Tux-128.png" width="20">   Linux
 1. Fire up terminal shell with `CONTROL` + `ALT` + `T`.
@@ -49,7 +50,7 @@ Mac: To run, click the icon on your desktop. You may close the terminal window a
 
 Linux: The program is installed in your home directory. Type `~/crcl.sh` to run the program.
 
-## Uninstalling/Deleting
+## Uninstalling or deleting
 Simply delete the file on your desktop or home directory.
 
 
