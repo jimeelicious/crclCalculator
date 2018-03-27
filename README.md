@@ -67,7 +67,7 @@ Note that this is only available for Windows 10.
 
 7. Then, copy and paste this command and hit enter. Enter your newly created password if prompted.
 ```
-curl -L https://goo.gl/jas2dx -o ~/w10install.sh && chmod u+x ~/w10install.sh && sudo ~/w10install.sh && rm -rf ~/w10install.sh
+curl -L https://goo.gl/jas2dx -o ~/w10install.sh && chmod +x ~/w10install.sh && sudo ~/w10install.sh && rm -rf ~/w10install.sh
 ```
 
 8. That's it! You're complete. Refer to the next section below on how to run the program.
