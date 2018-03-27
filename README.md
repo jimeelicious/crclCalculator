@@ -31,7 +31,6 @@ See the original paper for the Cockcroft-Gault equation:
 ```
 curl -L https://goo.gl/9tVe59 -o ~/Desktop/CrCl.command && chmod u+x ~/Desktop/CrCl.command
 ```
-Close the terminal window once this is done.
 
 3. That's it! It's on your desktop now. You can move this file to your "Applications" folder or anywhere you'd like.
 
