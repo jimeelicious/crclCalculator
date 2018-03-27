@@ -62,7 +62,8 @@ Note that this is only available for Windows 10.
 
 6. Follow the instructions to install. This may take a while.
 ![Ubuntu install](img/ubuntuinstall.png)
-- When complete, create an account. This can be the same or different as your Windows log-in.
+- When complete, create an account. This can be the same or different as your Windows log-in. 
+- Note that when entering the password, your input will not be displayed, even though you are typing. Don't worry this is normal as the system hides your input for security.
 
 7. Then, copy and paste this command and hit enter.
 ```
