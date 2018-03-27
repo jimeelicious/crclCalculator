@@ -11,4 +11,5 @@ if [ $? = 1 ]; then
 fi
 
 clear;
-echo 'Complete! Type ~/crcl.sh to run the program. In the future, click Start Menu > Ubuntu to open the creatinine calculator.'
+echo 'Complete! Type ~/crcl.sh to run the program and hit enter.'
+echo 'In the future, click Start Menu > Ubuntu to open the creatinine calculator.'
