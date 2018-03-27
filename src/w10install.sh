@@ -4,7 +4,7 @@ sudo echo "Installing! Please wait."
 sudo apt-get update &&
 sudo apt-get -y install python &&
 curl -L https://goo.gl/9tVe59 -o ~/crcl.sh &&
-chown "$USER":"$USER" ~/crcl.sh && sudo chmod 771 ~/crcl.sh
+chown "$USER":"$USER" ~/crcl.sh && chmod 771 ~/crcl.sh
 
 grep "crcl.sh" ~/.bashrc
 if [ $? = 1 ]; then
