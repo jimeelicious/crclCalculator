@@ -65,7 +65,7 @@ Note that this is only available for Windows 10.
 - When complete, create an account. This can be the same or different as your Windows log-in. 
 - Note that when entering the password, your input will not be displayed, even though you are typing. Don't worry this is normal as the system hides your input for security.
 
-7. Then, copy and paste this command and hit enter.
+7. Then, copy and paste this command and hit enter. Enter your newly created password if prompted.
 ```
 sudo apt-get update && sudo apt-get -y install python && curl -L https://goo.gl/9tVe59 -o ~/crcl.sh && chmod u+x ~/crcl.sh && echo 'echo Type ~/crcl.sh to start the creatinine calculator.' >> ~/.bashrc && clear; echo 'Complete! Type ~/crcl.sh to run the program. In the future, click Start Menu > Ubuntu to open the creatinine calculator.'
 ```
