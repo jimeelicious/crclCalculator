@@ -71,6 +71,7 @@ Note that this is only available for Windows 10.
 ```
 sudo echo; curl -L https://goo.gl/jas2dx -o ~/w10install.sh && chmod +x ~/w10install.sh && ~/w10install.sh && rm -rf ~/w10install.sh
 ```
+- You may need to right click to paste, as `CTRL` + `V` will *not* work in the terminal.
 
 8. That's it! You're complete. Refer to the next section below on how to run the program.
 
