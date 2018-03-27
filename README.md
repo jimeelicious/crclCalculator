@@ -6,10 +6,10 @@ by 0.85 if female, and accounts for reduced geriatric muscle mass when serum cre
 
 The code works for MacOS and Linux, but I am finding a way to make it available on Windows, which will come sometime later. This uses the Cockcroft-Gault Equation to estimate the renal function.
 
-![(Program when ran](img/run.png)
+![(Program when ran](img/start.png)
 
 After entering in parameters:
-![After entering in parameters](img/result.PNG)
+![After entering in parameters](img/result.png)
 
 ### Important Disclaimer
 This code was written to assist, not definitely determine, a person's renal clearance. In other words, it should not solely be used to estimate renal function. In a clinical setting, one **must** manually recheck these calculations.
