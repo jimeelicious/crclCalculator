@@ -36,7 +36,7 @@ curl -L https://goo.gl/9tVe59 -o ~/Desktop/CrCl.command && chmod u+x ~/Desktop/C
 - You can now close the installation terminal window.
 - Also, you can move the calculator from your desktop to your "Applications" folder or anywhere you'd like.
 
-### <img src="https://cdn4.iconfinder.com/data/icons/proglyphs-free/512/Linux_-_Tux-128.png" width="20">   Linux
+### <img src="https://raw.githubusercontent.com/jimeelicious/crclCalculator/master/img/linux.png" width="20">   Linux
 1. Fire up terminal shell with `CONTROL` + `ALT` + `T`.
 
 2. Copy and paste this code in terminal, and hit `Enter`:
