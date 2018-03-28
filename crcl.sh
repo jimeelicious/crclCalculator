@@ -106,7 +106,9 @@ done
 loop=1
 while [ $loop = 1 ]; do read -p "Enter in the serum creatinine (mg/dL): " scr
 	if ! $(echo $scr | perl -nle 'print if $t ||= m{^[0-9]\d*(\.\d+)?$} }{ exit 1 if !$t' &>/dev/null); then
-	  echo "   Please enter the serum creatinine in mg/dL. Press control + C to quit."; sleep 0.4
+	  echo "   Please enter the serum creatinine in mg/dL."
+	  echo "   If SCr is less than 1, please enter a leading 0 (e.g. 0.9 for .9)."
+	  echo "   To quit, press control + C."; sleep 1
 	else
 	  loop=0
 	fi
