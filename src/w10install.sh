@@ -8,7 +8,7 @@ chown "$USER":"$USER" ~/crcl.sh && chmod 771 ~/crcl.sh
 
 grep "crcl.sh" ~/.bashrc
 if [ $? = 1 ]; then
-  echo 'echo Type ~/crcl.sh to start the creatinine calculator.' >> ~/.bashrc
+  echo 'echo Type \~/crcl.sh to start the creatinine calculator.' >> ~/.bashrc
 fi
 
 clear;
