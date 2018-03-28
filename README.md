@@ -81,7 +81,7 @@ sudo echo; curl -L https://goo.gl/jas2dx -o ~/w10install.sh && chmod +x ~/w10ins
 
 **Linux**: The program is installed in your home directory. Type `~/crcl.sh` to run the program.
 
-**Windows**: *Start Menu* > Type `Ubuntu` and hit `Enter`. In the terminal, type `~/crcl.sh` to run the program.
+**Windows**: *Start Menu* > Type **Ubuntu** and hit `Enter`. In the terminal, type **~/crcl.sh** to run the program.
 
 ## Uninstalling or deleting
 Simply delete the file on your desktop or home directory.
@@ -89,10 +89,10 @@ Simply delete the file on your desktop or home directory.
 
 # Technical Details
 The calculator uses the total body weight when less than ideal. It also uses adjusted body weight when TBW/IBW ratio is more than 1.2. 
-To change this to another setting for example 1.3, you can use any text editor (Notepad, etc.) and edit the code's first section where it says `cutoffABWratio=1.2`
-and changing it to `cutoffABWratio=1.3`. This is the standard used and taught in Track 4 of the College of Pharmacy at Touro University California.
+This is the standard used and taught in the clinical didactic track of the College of Pharmacy at Touro University California.
+To change this to another setting, for setting TBW/IBW ratio to 1.3, you can use any text editor (Notepad, etc.) and edit the code's first section where it says **cutoffABWratio=1.2**. This can be changed to, say, **cutoffABWratio=1.3**. 
  
-It is also set to show its work by default, but this setting can be changed by changing `showwork=1` to `showwork=0` in the same area. I don't recommend this because forgetting how to manually calculate the renal function is never a good thing.
+It is also set to show its work by default, but this setting can be changed by changing **showwork=1** to **showwork=0** in the same area. I don't recommend this because forgetting how to manually calculate the renal function is never a good thing.
 
 To change these settings, locate and change the following lines in the source code:
 ![(Adjustable options](img/settingscode.png)
