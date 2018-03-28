@@ -28,50 +28,50 @@ See the original paper for the Cockcroft-Gault equation:
 1. `COMMAND` + `SPACE` from the desktop to open Spotlight, then type **terminal** and hit `Enter` to open terminal.
 
 2. Copy and paste this code in terminal, and hit enter:
-```
-curl -L https://goo.gl/9tVe59 -o ~/Desktop/CrCl.command && chmod u+x ~/Desktop/CrCl.command
-```
+   ```
+   curl -L https://goo.gl/9tVe59 -o ~/Desktop/CrCl.command && chmod u+x ~/Desktop/CrCl.command
+   ```
 
 3. That's it! It's on your desktop now.
-- You can now close the installation terminal window.
-- Also, you can move the calculator from your desktop to your "Applications" folder or anywhere you'd like.
+   - You can now close the installation terminal window.
+   - Also, you can move the calculator from your desktop to your "Applications" folder or anywhere you'd like.
 
 ### <img src="https://raw.githubusercontent.com/jimeelicious/crclCalculator/master/img/linux.png" width="20">   Linux
 1. Fire up terminal shell with `CONTROL` + `ALT` + `T`.
 
 2. Copy and paste this code in terminal, and hit `Enter`:
-```
-curl -L https://goo.gl/9tVe59 -o ~/crcl.sh && chmod u+x ~/crcl.sh
-```
+   ```
+   curl -L https://goo.gl/9tVe59 -o ~/crcl.sh && chmod u+x ~/crcl.sh
+   ```
 
 3. You're all set! It's on your home directory.
 
 
 ### <img src="https://image.freepik.com/free-icon/windows-8-logo_318-40228.jpg" width="20"> Windows 10
-Note that this is only available for Windows 10.
+Note that this is only available for Windows 10, and not any older versions.
 
 1. Click the *Start Menu*, and type in **Turn Windows features on or off**. Hit `Enter`.
 
 2. Find and check the **Windows Subsystem for Linux**, and hit OK.
-![Adjustable options](img/w10linuxsetting.png)
+   ![Adjustable options](img/w10linuxsetting.png)
 
 3. Restart your computer when prompted.
 
 4. Click the *Start Menu*, then type **Ubuntu**. Select the "Ubuntu" app from the *Trusted Microsoft Store app* option.
-![Start Menu](img/ubuntumenu.png)
+   ![Start Menu](img/ubuntumenu.png)
 
 5. Download it by clicking the `Get` button in the Microsoft Store. Once down, click `Launch`.
 
 6. Follow the instructions to install. This may take a while.
-![Ubuntu install](img/ubuntuinstall.png)
-- When complete, create an account. This can be the same or different as your Windows log-in. 
-- Note that when entering the password, your input will not be displayed, even though you are typing. Don't worry this is normal as the system hides your input for security.
+   ![Ubuntu install](img/ubuntuinstall.png)
+   - When complete, create an account. This can be the same or different as your Windows log-in. 
+   - Note that when entering the password, your input will not be displayed, even though you are typing. Don't worry this is normal as the system hides your input for security.
 
 7. Then, copy and paste this command and hit `Enter`. Enter your newly created password if prompted.
-```
-sudo echo; curl -L https://goo.gl/jas2dx -o ~/w10install.sh && chmod +x ~/w10install.sh && ~/w10install.sh && rm -rf ~/w10install.sh
-```
-- You may need to right click to paste, as `CTRL` + `V` will *not* work in the terminal.
+   ```
+   sudo echo; curl -L https://goo.gl/jas2dx -o ~/w10install.sh && chmod +x ~/w10install.sh && ~/w10install.sh && rm -rf ~/w10install.sh
+   ```
+   - You may need to right click to paste, as `CTRL` + `V` will *not* work in the terminal.
 
 8. That's it! You're complete. Refer to the next section below on how to run the program.
 
@@ -101,5 +101,4 @@ To change these settings, locate and change the following lines in the source co
 View the source code [here](https://github.com/jimeelicious/creatineCalculator/blob/master/crcl.sh). This program assumes Python, Bash, and cURL are installed.
 
 #### Acknowledgements
-- **Dr. Adrian Palisoc, PharmD.**
-For his contribution in providing crucial clinical pearls that led to the creation of the disclaimer.
+- **Dr. Adrian Palisoc, PharmD.**, for his contribution in providing crucial clinical pearls that led to the creation of the disclaimer.
